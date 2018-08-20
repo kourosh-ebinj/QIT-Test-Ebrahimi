@@ -1,0 +1,246 @@
+﻿@*@using Common.Models;
+@using TestUI.Controllers;
+@using using Newtonsoft.Json;
+
+@model IEnumerable<ClassModel>;
+
+@{
+        ViewData["Title"] = "Home Page";
+        var classes = (List<ClassModel>)ViewData[HomeController.const_Classes];
+    }
+
+<h2>@ViewBag.Title</h2>
+
+
+       <!-- ko template: { name: 'ClassesList', Data: Classes, if: Classes().length > 0 } -->
+<!-- /ko -->
+
+
+    @if (Model.Count() < 1)
+    {
+        <tr><td colspan="4" class="noRecord">No Records found</td></tr>
+    }
+
+<div>   
+    Class: <p></p>
+</div>
+<table class="table studentsList">
+    <tr>
+        <th>
+            @nameof(StudentModel.Name) 
+        </th>
+        <th>
+            @nameof(StudentModel.Age)
+        </th>
+        <th>
+            @nameof(StudentModel.GPA)
+        </th>
+
+        <th></th>
+    </tr>
+
+    
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td class='@item.GPA > 3.2 ? "bold": ""'>
+                @Html.DisplayFor(modelItem => item.GPA)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                <a href="@Url.Action("DeleteConfirmed", "Students", new { id=item.Id })"
+                   onclick="return confirm('Are you OK to proceed?')">Delete</a>
+            </td>
+        </tr>
+    }
+    @if (Model.Count() < 1)
+    {
+        <tr><td colspan="4" class="noRecord">No Records found</td></tr>
+    }
+</table>
+
+<script id="ClassesList" type="text/html">
+    <div data-bind="if: ClassesList" class="parentSport">
+        <div class="ClassesList_inner">
+            <table class="table classesList">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Location)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TeacherName)
+                    </th>
+
+                    <th></th>
+                </tr>
+
+                <!-- ko foreach: Classes-->
+
+                <tr class="dataRow  ui-btn-up-c">
+                    <td class="Name" data-bind="text: Name"></td>
+                    <td class="Location" data-bind="text: Location"></td>
+                    <td class="TeacherName" data-bind="text: TeacherName"></td>
+
+                    <td class="remove"><a href="#" data-bind="click: $root.removeItem">حذف</a></td>
+                </tr>
+                <!-- /ko -->
+            </table>
+        </div>
+    </div>
+</script>
+<script>
+    var _classessVM;
+    var _studentsVM;
+    jQuery(document).ready(function () {
+        _classessVM = new classessVM();
+        _studentsVM = new studentsVM();
+        ko.validation.init({ decorateElement: true, insertMessages: false, observable: true, css: { validationElement: true }, errorElementClass: "input-validation-error", errorMessageClass: "validation-summary-errors", errorsAsTitleOnModified: true }, true);
+        ko.applyBindingsWithValidation(_classessVM);
+        ko.applyBindingsWithValidation(_studentsVM);
+
+        LoadClasses();
+        //ko.applyBindings(classessVM);
+        //ko.applyBindings(studentsVM);
+
+    });
+
+    var student = function (name, age, gpa) {
+        this.name = name;
+        this.age = age;
+        this.gpa = gpa;
+        }
+
+    // The view model is an abstract description of the state of the UI, but without any knowledge of the UI technology (HTML)
+    var classessVM = {
+        classess: [],
+
+        self.removeItem = removeItem;
+    };
+
+    var studentsVM = {
+        students: [],
+
+
+    };
+
+    function removeItem(item) {
+
+        if (!confirm("Are you sure?"))
+            return;
+        vm.ParentSportsList.remove(item);
+    }
+    function LoadClasses() {
+        GetClasses();
+    }
+
+    function LoadStudents(classId) {
+        GetStudents(classId);
+    }
+
+</script>
+
+!--Get Classes-->
+<script>
+    var objToastr;
+
+    function GetClasses() {
+        var apiUrl = "@(Utility.GetAPIUrl().Trim('/'))";
+            apiUrl += "/Classes");
+
+            var httpReq = app.dataService.ajaxAsGet(apiUrl, null, ClassesSuccess, ClassesFailure);
+
+        toastr.options.timeOut = 0;
+        toastr.options.tapToDismiss = false;
+        objToastr = app.toastr.warning("@HomeController.const_FetchingData_Message");
+    }
+
+    function ClassesSuccess(data) {
+        debugger;
+        try {
+
+            _classessVM.classess(jQuery.parseJSON(data));
+        }
+        catch (ex) {
+            window.location.href = window.location.href;
+        }
+        debugger;
+        toastr.options.timeOut = 0;
+        toastr.clear(objToastr);
+
+
+        //productsControl.prepend(jQuery('<option></option>').val("").html("محصول"));
+
+        if (jQuery(productsControl).find(":selected").length < 1 || jQuery(productsControl).find(":selected").val() == "") return;
+
+        jQuery(productsControl).parent().parent().show();
+        jQuery(productDetailsControl).show();
+        jQuery(".submit-wrapper").show();
+
+        GetProductCounts(jQuery(productsControl).find(":selected")[0]);
+
+    }
+
+    function ClassesFailure(response) {
+        toastr.options.timeOut = 0;
+        toastr.clear(objToastr);
+
+        objToastr = app.toastr.error(response.statusText + " - Code: " + response.status);
+    }
+</script>
+
+!--Get Students-->
+<script>
+    var objToastr;
+
+    function GetStudents(classId) {
+        var apiUrl = "@(Url.Content(Utility.GetAPIUrl().Trim('/')))";
+            apiUrl += "/Students/ByClassId/" + classId)';
+
+        var httpReq = app.dataService.ajaxAsGet(apiUrl, null, StudentsSuccess, StudentsFailure);
+
+        toastr.options.timeOut = 0;
+        toastr.options.tapToDismiss = false;
+        objToastr = app.toastr.warning("@HomeController.const_FetchingData_Message");
+    }
+
+    function StudentsSuccess(data) {
+        debugger;
+        try {
+
+            _studentsVM.students(jQuery.parseJSON(data));
+        }
+        catch (ex) {
+            window.location.href = window.location.href;
+        }
+        debugger;
+        toastr.options.timeOut = 0;
+        toastr.clear(objToastr);
+        
+        
+        //productsControl.prepend(jQuery('<option></option>').val("").html("محصول"));
+
+        if (jQuery(productsControl).find(":selected").length < 1 || jQuery(productsControl).find(":selected").val() == "") return;
+
+        jQuery(productsControl).parent().parent().show();
+        jQuery(productDetailsControl).show();
+        jQuery(".submit-wrapper").show();
+
+        GetProductCounts(jQuery(productsControl).find(":selected")[0]);
+
+    }
+
+    function StudentsFailure(response) {
+        toastr.options.timeOut = 0;
+        toastr.clear(objToastr);
+
+        objToastr = app.toastr.error(response.statusText + " - Code: " + response.status);
+    }
+</script>*@

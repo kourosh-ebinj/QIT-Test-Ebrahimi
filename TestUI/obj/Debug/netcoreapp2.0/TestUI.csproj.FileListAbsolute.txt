@@ -1,0 +1,15 @@
+C:\Users\Administrator\source\repos\TestCore\TestUI\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\Administrator\source\repos\TestCore\TestUI\bin\Debug\netcoreapp2.0\TestUI.deps.json
+C:\Users\Administrator\source\repos\TestCore\TestUI\bin\Debug\netcoreapp2.0\TestUI.runtimeconfig.json
+C:\Users\Administrator\source\repos\TestCore\TestUI\bin\Debug\netcoreapp2.0\TestUI.runtimeconfig.dev.json
+C:\Users\Administrator\source\repos\TestCore\TestUI\bin\Debug\netcoreapp2.0\TestUI.dll
+C:\Users\Administrator\source\repos\TestCore\TestUI\bin\Debug\netcoreapp2.0\TestUI.pdb
+C:\Users\Administrator\source\repos\TestCore\TestUI\bin\Debug\netcoreapp2.0\Common.dll
+C:\Users\Administrator\source\repos\TestCore\TestUI\bin\Debug\netcoreapp2.0\Common.pdb
+C:\Users\Administrator\source\repos\TestCore\TestUI\obj\Debug\netcoreapp2.0\TestUI.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\source\repos\TestCore\TestUI\obj\Debug\netcoreapp2.0\TestUI.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\TestCore\TestUI\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Administrator\source\repos\TestCore\TestUI\obj\Debug\netcoreapp2.0\TestUI.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\TestCore\TestUI\obj\Debug\netcoreapp2.0\TestUI.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\TestCore\TestUI\obj\Debug\netcoreapp2.0\TestUI.dll
+C:\Users\Administrator\source\repos\TestCore\TestUI\obj\Debug\netcoreapp2.0\TestUI.pdb

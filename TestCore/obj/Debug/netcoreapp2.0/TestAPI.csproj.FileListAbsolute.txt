@@ -1,0 +1,16 @@
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\TestAPI.dll
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\Common.dll
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\TestDAL.dll
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\Common.pdb
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\TestDAL.pdb
+C:\Users\Administrator\source\repos\TestCore\TestCore\obj\Debug\netcoreapp2.0\TestAPI.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\source\repos\TestCore\TestCore\obj\Debug\netcoreapp2.0\TestAPI.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\TestCore\TestCore\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Administrator\source\repos\TestCore\TestCore\obj\Debug\netcoreapp2.0\TestAPI.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\TestCore\TestCore\obj\Debug\netcoreapp2.0\TestAPI.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\TestCore\TestCore\obj\Debug\netcoreapp2.0\TestAPI.dll
+C:\Users\Administrator\source\repos\TestCore\TestCore\obj\Debug\netcoreapp2.0\TestAPI.pdb
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\TestAPI.deps.json
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\TestAPI.runtimeconfig.json
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\TestAPI.runtimeconfig.dev.json
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\TestAPI.pdb

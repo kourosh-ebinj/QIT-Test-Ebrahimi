@@ -1,0 +1,13 @@
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\TestCore.deps.json
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\TestCore.runtimeconfig.json
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\TestCore.runtimeconfig.dev.json
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\TestCore.dll
+C:\Users\Administrator\source\repos\TestCore\TestCore\obj\Debug\netcoreapp2.0\TestCore.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\source\repos\TestCore\TestCore\obj\Debug\netcoreapp2.0\TestCore.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\TestCore\TestCore\obj\Debug\netcoreapp2.0\TestCore.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\TestCore\TestCore\obj\Debug\netcoreapp2.0\TestCore.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\TestCore.pdb
+C:\Users\Administrator\source\repos\TestCore\TestCore\obj\Debug\netcoreapp2.0\TestCore.dll
+C:\Users\Administrator\source\repos\TestCore\TestCore\obj\Debug\netcoreapp2.0\TestCore.pdb
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\TestDAL.dll
+C:\Users\Administrator\source\repos\TestCore\TestCore\bin\Debug\netcoreapp2.0\TestDAL.pdb

@@ -1,0 +1,92 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+
+.errorBoxBottom, .successBoxBottom, .warningBoxBottom {
+    position: fixed;
+    bottom: -120px;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    transition: 0.4s;
+}
+
+.messages .errorBoxBottom, .messages .successBoxBottom, .messages .warningBoxBottom {
+    position: absolute;
+    z-index: 9;
+    top: 50px;
+    left: 0;
+    right: 0;
+    transition: 0.4s;
+    margin-right: auto;
+    line-height: 40px;
+    margin-left: auto;
+    -webkit-animation-name: errorBoxBottom;
+    -webkit-animation-duration: 4s;
+    animation-name: errorBoxBottom;
+    animation-duration: 4s;
+    width: 260px;
+    height: 40px;
+}
+
+    .messages .errorBoxBottom span, .messages .successBoxBottom span,
+    .messages .warningBoxBottom span {
+        height: 40px;
+        background-color: #e87c7c;
+        width: 100%;
+        color: #fff;
+        font-size: 13px;
+        display: block;
+        text-align: center;
+    }
+
+    .messages .successBoxBottom span {
+        background-color: #65da9e
+    }
+
+    .messages .warningBoxBottom span {
+        background-color: #ffa93f;
+    }
+
+.bold {
+    background-color: #eee;
+    font-weight: bold !important;
+}
+
+.noRecord {
+    font-style: italic;
+    color: #bbb;
+}

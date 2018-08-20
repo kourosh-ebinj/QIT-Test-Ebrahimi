@@ -1,0 +1,10 @@
+C:\Users\Administrator\source\repos\TestCore\TestDAL\bin\Debug\netcoreapp2.0\TestDAL.deps.json
+C:\Users\Administrator\source\repos\TestCore\TestDAL\bin\Debug\netcoreapp2.0\TestDAL.runtimeconfig.json
+C:\Users\Administrator\source\repos\TestCore\TestDAL\bin\Debug\netcoreapp2.0\TestDAL.runtimeconfig.dev.json
+C:\Users\Administrator\source\repos\TestCore\TestDAL\bin\Debug\netcoreapp2.0\TestDAL.dll
+C:\Users\Administrator\source\repos\TestCore\TestDAL\bin\Debug\netcoreapp2.0\TestDAL.pdb
+C:\Users\Administrator\source\repos\TestCore\TestDAL\obj\Debug\netcoreapp2.0\TestDAL.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\TestCore\TestDAL\obj\Debug\netcoreapp2.0\TestDAL.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\TestCore\TestDAL\obj\Debug\netcoreapp2.0\TestDAL.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\TestCore\TestDAL\obj\Debug\netcoreapp2.0\TestDAL.dll
+C:\Users\Administrator\source\repos\TestCore\TestDAL\obj\Debug\netcoreapp2.0\TestDAL.pdb

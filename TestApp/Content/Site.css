@@ -1,0 +1,74 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.errorBoxBottom, .successBoxBottom {
+    position: fixed;
+    bottom: -120px;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    transition: 0.4s;
+}
+
+.messages .errorBoxBottom, .messages .successBoxBottom {
+    position: absolute;
+    z-index: 9;
+    top: 50px;
+    left: 0;
+    right: 0;
+    transition: 0.4s;
+    margin-right: auto;
+    line-height: 40px;
+    margin-left: auto;
+    -webkit-animation-name: errorBoxBottom;
+    -webkit-animation-duration: 4s;
+    animation-name: errorBoxBottom;
+    animation-duration: 4s;
+    width: 260px;
+    height: 40px;
+}
+
+    .messages .errorBoxBottom span, .messages .successBoxBottom span {
+        height: 40px;
+        background-color: #e87c7c;
+        width: 100%;
+        color: #fff;
+        font-size: 13px;
+        display: block;
+        text-align: center;
+    }
+
+    .messages .successBoxBottom span {
+        background-color: #65da9e
+    }
+
+.bold {
+    background-color: #eee;
+    font-weight: bold !important;
+}
+.noRecord {
+font-style: italic;
+color: #bbb;
+}

@@ -1,0 +1,14 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    //var exception = Server.GetLastError();
+    //Elmah.ErrorSignal.FromCurrentContext().Raise(exception);
+    
+    ViewBag.Title = "Error 500";
+}
+<div class="errorPage">
+    <hgroup>
+        <h1 class="text-danger">Error 500</h1>
+        <h2 class="text-danger">An error occured in processing your request. Please try again or contact the administrator.</h2>
+    </hgroup>
+</div>
